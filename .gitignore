@@ -147,3 +147,18 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+# Go
+bin/
+
+# IDE
+.vscode/
+
+# Environment artifacts
+.env.local
