@@ -43,14 +43,17 @@ jobs:
 
   go:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: starters/go-service
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5
         with:
           go-version: '1.22'
-      - run: gofmt -l starters/go-service
-      - run: test -z "$(gofmt -l starters/go-service)"
-      - run: go test ./starters/go-service/...
+      - run: gofmt -l .
+      - run: test -z "$(gofmt -l .)"
+      - run: go test ./...
 
   codespaces-smoke:
     runs-on: ubuntu-latest
